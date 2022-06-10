@@ -13,6 +13,10 @@ body {
 main {
   flex: 1;
 }
+.btn-primary {
+  background-color: #ffc000;
+  color: black;
+}
 
 .products {
   display: flex;
@@ -22,6 +26,9 @@ main {
 .product {
   border: 1px #404040 solid;
   margin: 1rem;
+}
+.rating span {
+  color: #ffc000;
 }
 .product img {
   width: 100%;

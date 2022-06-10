@@ -1,0 +1,368 @@
+E-COMMERCE
+
+1.-  install git, in vs code, in the terminal -> change to git bash
+     +, select 'default profile', and select git bash 
+2.- install extensions (view-> extensions), prettier, and esLint (shows errors)
+3.- javascript es6, snippet, and es7 for react
+ To test rfc -> tab
+
+4.- create react app
+ecom-mern-paypal-deploy>npx create-react-app frontend
+> cd frontend
+> npm start
+
+5.- create a repository in git
+create git ignore:
+
+frontend> rm -rf .git
+move .gitignore to main, dragging 
+
+-> select in 'activity bar' -> source control -> 
+	1. Initializese repository
+    2. publish to gitHub
+
+
+Create gitignore file
+
+Borre accidentalmente el gitignore file, entonces para volverlo a crear 
+Con lo que necesita react ignorar:
+frontend> npx react-gitignore
+
+
+6.- en el gitignore file NO OLVIDAR, QUITAR '/' de node_modules, build
+
+
+# dependencies
+node_modules
+/.pnp
+.pnp.js
+.next
+
+# testing
+/coverage
+
+# production
+build
+
+
+7.- if error no scripts while running frontend> npm start
+How To Solve sh: react-scripts: command not found Error ?
+
+How To Solve sh: react-scripts: command not found Error ?
+To Solve sh: react-scripts: command not found Error Just try to install react-scripts with this command: npm i react-scripts And then try to run your project with npm start command Your error should be fixed now.
+
+sh: react-scripts: command not found
+To Solve sh: react-scripts: command not found Error If You are trying any github Project Or others project on your system Then You just have to delete node_modules first and then run npm install (or yarn) to ensure all deps are downloaded. To delete node_modules folder just run this command Or manually delete node_modules folder: rm -rf node_modules And then run npm install to ensure all deps are downloaded: npm install Now, You can run your project with this command: npm start now, Your error must be solved.
+
+8.- RUTAS
+
+https://reactrouter.com/docs/en/v6/getting-started/tutorial
+
+frontend>
+1. npm i react-router-dom
+
+	Import { BroswerRouter, Route, Routes } from 'react-router-dom';
+	function App() {
+  	return (
+    	<BroswerRouter>
+      	<div className="App">
+        		<header className="App-header">
+          	<	a href="/">amazona</a>
+        		</header>
+        <main>
+          <Routes>
+            <Route path="/" element={<HomeScreen />} />
+          </Routes>
+.
+.
+.
+
+
+
+2. Create route for Home Screen
+3. Create router for product screen 
+
+Link instead of a href .... Link doesn't refresh the page
+
+
+
+
+
+8.-  create backend folder, in backend > npm init
+
+In package.json add after name:
+      "type": "module",  to use import instead of required to use packages
+9.- create in backend folder server.js to create the express server
+Backend> npm install express           so the package.json now has the line express
+
+
+In server.js
+
+import express from 'express';
+import data from './data.js';
+const app = express();
+
+app.use('/api/products', (req, res) => {
+  res.send(data.products);
+});
+
+const port = process.env.PORT || 5001;  // no funciona con port 5000, dice que est'a en uso
+app.listen(port, () => {
+  console.log(`serve at http://localhost:${port}`);
+});
+
+
+
+Then in terminal
+Backend> node server.js
+
+
+--> so if we test: http://localhost:5001/api/products, returns the list of products
+
+
+10.- INSTALL NODEDEMON
+(NOT TO HAVE TO STOP THE SERVER if any changes)
+ackend % npm install nodemon --save-dev         //save dev it not to get it to production 
+
+
+
+So in package.json:
+ "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+
+
+So in scripts in this file add:
+"scripts": {
+    "start": "nodemon server.js",
+
+
+
+Then to run in frontend> npm start           //then listen to all changes without restarting the server
+
+
+
+11.- FETCH PRODUCTS FROM BACKEND
+--------------------------------
+
+
+---> to have access to BACKEND, and in the FRONTEND
+
+In /Users/olmedo/Projects/ecom-mern-paypal-deploy/frontend/package.json
+Add: 
+
+ {
+  "name": "frontend",
+  "proxy": "http://localhost:5001",
+
+
+--> now in frontend we use AXIOS to access data from backend;
+So in the frontend install: 
+
+frontend % npm install axios
+
+
+--> then go to homescreen.js
+
+ADD:
+
+import { useEffect, useState } from 'react';
+//import data from '../data';
+import axios from 'axios';
+
+function HomeScreen() {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get('/api/products');
+      setProducts(result.data);
+    };
+    fetchData();
+  }, []);
+
+
+AND CHANGE IN THIS LINE {products.map((product) => (.    //itwas data.products.map before, pointing to data file
+
+
+--> now test: inspect in browser -> network --> select XHR and refresh
+
+
+1:15:15
+
+12.- USE REDUCER to MANAGE COMPLEX STATES instead of useState
+
+To show all the changes in the state
+
+--> define reducer
+--> update fetch data
+--> get state from usReducer
+
+
+//REDUCER
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'FETCH_REQUEST':
+      return { ...state, loading: true };
+    case 'FETCH_SUCCESS':
+      return { ...state, products: action.payload, loading: false };
+    case 'FETCH_FAIL':
+      return { ...state, loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+
+function HomeScreen() {
+
+
+  const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
+    products: [],
+    loading: true,
+    error: '',
+  });
+AND COMMENT:
+//const [products, setProducts] = useState([]);
+.
+.
+UPDATE USEEFFECT from:
+useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get('/api/products');
+      setProducts(result.data);
+    };
+    fetchData();
+  }, []);
+
+TO:
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'FETCH_REQUEST':
+      return { ...state, loading: true };
+    case 'FETCH_SUCCESS':
+      return { ...state, products: action.payload, loading: false };
+    case 'FETCH_FAIL':
+      return { ...state, loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+
+
+INSTALL LOGGER:
+frontend>npm install use-reducer-logger --force 
+
+And add:
+import logger from 'use-reducer-logger';
+.
+.
+.
+
+function HomeScreen() {
+  const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
+.
+.
+
+-> checking in inspect, we can see now actions in REQUEST, SUCCESS, so just in success PRODUCTS array
+is populated
+
+--> NOW SHOW A LOADING BOX
+
+return (
+    <div>
+      <h1>Featured Products</h1>
+      <div className="products">
+        {loading ? (
+          <div> Loading...</div>
+        ) : error ? (
+          <div>{error}</div>
+        ) : (
+
+...
+...
+)
+
+To show in browser, INSPECT-> network -> change 'no throttling' to 'slow 3g'
+
+
+13.- react BOOTSTRAP.   We use REACT BOOTSTRAP
+
+https://react-bootstrap.github.io
+
+
+frontend> npm install react-bootstrap bootstrap
+
+Por alguna razón no funciona rpm install, entonces funciona con > yarn add re...
+
+
+UPDATE APP.js
+
+--> go to 
+
+
+https://react-bootstrap.github.io/getting-started/introduction
+
+--> layout --> components
+
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+
+<header className="App-header">
+        <Navbar bg="dark" variant="dark" expand="lg">
+            <Container>              
+              <LinkContainer to="/">
+                <Navbar.Brand>amazona</Navbar.Brand>
+              </LinkContainer>
+            </Container>  
+        </Navbar>
+...
+...
+...
+For 'LinkContainer'
+Frontend>  yarn add react-router-bootstrap
+Or
+npm install react-router-bootstrap
+
+And add in app.js: 
+import { LinkContainer } from 'react-router-bootstrap';
+
+And in index.js
+Import 'bootstrap/dist/css/bootstrap.min.css';
+
+In index.css delete styles of 'a' and 
+
+
+
+
+
+FUNCIONA CON:
+
+Revisar que esto este bien:
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import { LinkContainer } from 'react-router-bootstrap';
+
+              <LinkContainer to="/">
+                <Navbar.Brand>amazona</Navbar.Brand>
+              </LinkContainer>
+
+OPCIONAL:
+              <LinkContainer to="/">
+                <NavItem eventKey={1}>amazona</NavItem>
+              </LinkContainer>
+
+Ejemplo en: 
+https://www.codegrepper.com/code-examples/javascript/frameworks/react/navbar+using+react+bootstrap
+https://github.com/react-bootstrap/react-router-bootstrap/issues/259
+
+
+1:34:10
+
+
+--> CONVERT PRODUCTLIST TO BOOTSTRAP & CREATE RATING
+-*---------------------------------*--
+
+
+
+https://www.youtube.com/watch?v=CDtPMR5y0QU&list=PLSXxP8I3oMOnRHttfOHmoUdyNUuqjwEOv&index=3
+
+
