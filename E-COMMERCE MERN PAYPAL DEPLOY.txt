@@ -360,6 +360,34 @@ https://github.com/react-bootstrap/react-router-bootstrap/issues/259
 
 --> CONVERT PRODUCTLIST TO BOOTSTRAP & CREATE RATING
 -*---------------------------------*--
+Usar components, cards bootstrap, font awesome, ratings
+
+1:47:30
+
+--> CREATE PRODUCT DETAILS SCREEN , FETCH PRODUCT FROM BACKEND
+--------------------------------------------------------------
+To show the name in the tab:
+Frontend> npm install react-helmet-async
+
+Then in index.js
+import { HelmetProvider } from 'react-helmet-async';
+
+.
+.
+<React.StrictMode>
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
+  </React.StrictMode>
+.
+.
+
+Then in productScreen.js wrap {product.name} with helmet
+	<Helmet>
+           <title>{product.name}</title>
+        </Helmet>
+
+
 
 
 
