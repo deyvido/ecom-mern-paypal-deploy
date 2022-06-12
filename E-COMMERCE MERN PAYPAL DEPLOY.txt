@@ -386,10 +386,11 @@ Then in productScreen.js wrap {product.name} with helmet
 	<Helmet>
            <title>{product.name}</title>
         </Helmet>
+2:02:40
 
 
-
-
+---> CREATE LOADING AND MESSAGE COMPONENT
+Spinner, loading, utils.js for error, message
 
 https://www.youtube.com/watch?v=CDtPMR5y0QU&list=PLSXxP8I3oMOnRHttfOHmoUdyNUuqjwEOv&index=3
 
