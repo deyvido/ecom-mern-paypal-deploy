@@ -415,6 +415,41 @@ const { state, dispatch: ctxDispatch } =useContext();
     })
   }
 
+2:20:30 Repasar el anterior para ver como fluye
+
+REDUCER:
+Reducers are functions that take the current state and an action as 
+arguments, and return a new state result. In other words, 
+(state, action) => newState.
+
+
+HOOKS : useEffect, useContext, useState ...
+https://www.youtube.com/watch?v=TNhaISOUy6Q&t=209s
+
+
+useEffect *
+---------
+https://www.youtube.com/watch?v=rDVe6pmeAjo
+
+useContext
+----------
+https://www.youtube.com/watch?v=lhMKvyLRWo0
+https://www.youtube.com/watch?v=7LIGIN6_R_s
+
+useReducer
+----------
+https://www.youtube.com/watch?v=uXWycyeTeCs
+https://www.youtube.com/watch?v=zIOWnK5RcOU
+
+Review:
+09- Manage State By Reducer Hook
+14- Create React Context
+
+
+
+15.- COMPLETE ADD TO CART FUNCTIONALITY
+---------------------------------------
+
 
 https://www.youtube.com/watch?v=CDtPMR5y0QU&list=PLSXxP8I3oMOnRHttfOHmoUdyNUuqjwEOv&index=3
 
