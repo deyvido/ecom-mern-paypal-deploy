@@ -449,14 +449,23 @@ Review:
 
 15.- COMPLETE ADD TO CART FUNCTIONALITY
 ---------------------------------------
-
+2:28
 16.- CREATE CART SCREEN
 -----------------------
 -Create two columns
 -Display item list
 -Create action column
 
- 2:28
+2:37
+
+17. COMPLETE CART SCREEN
+------------------------
+-click handler for inc/dec item
+-click handler for remove item
+-click handler for checkout
+
+
+
 
 https://www.youtube.com/watch?v=CDtPMR5y0QU&list=PLSXxP8I3oMOnRHttfOHmoUdyNUuqjwEOv&index=3
 
