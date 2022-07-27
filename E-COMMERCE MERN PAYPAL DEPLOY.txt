@@ -464,6 +464,79 @@ Review:
 -click handler for remove item
 -click handler for checkout
 
+18. CREATE SIGNIN SCREEN
+------------------------
+-create signin form
+-add email and password
+-add signing button
+
+2:54
+
+19. Connect To MongoDB Database
+-------------------------------
+    1. create atlas monogodb database
+    2. install local mongodb database
+    3. npm install mongoose
+    4. connect to mongodb database
+
+
+
+Mongodb.com
+https://cloud.mongodb.com
+USER:deyvidfr@hotmail.com password: HbKHhHCcC
+
+1.- Create new user
+User: amazona
+Password: amazona
+
+2.- in Network Access: 
+Add entries to your API access list:
+IP address: 0.0.0.0/0
+Description: all
+
+3.- go to databases,
+-Go to browse collections (if necessary 'resume' cluster due to inactivity and WAIT)
+
+-add my own data
+  Database Name: amazona
+  Collection Name: test-collection
+
+-Create a connection URI
+  Go to databases
+  Connect
+  Select Connect to your Application
+  And copy the connection string
+
+from: 
+mongodb+srv://<username>:<password>@cluster0.h4edm.mongodb.net/?retryWrites=true&w=majority
+to:
+mongodb+srv://amazona:amazona@cluster0.h4edm.mongodb.net/amazona?retryWrites=true&w=majority
+
+-then we need to connect in mongoosejs.com
+
+    >backend: npm install mongoose
+- also install a package to load dotenv file
+    >backend: npm install dotenv
+
+
+-Go to VS Code and open a file 
+	Create a .env file in backend
+	don't forget to ignore it 'dependencies'. In .gitignore
+
+--> TO INSTALL LOCALLY
+docs.mongodb.com/manual/administration/install-community
+	Select your operating system
+	Go to mongodb.com/products/compass
+
+	Download
+	Select platform
+	Download
+	Drag and drop
+	In .env file change:
+		
+		MONGODB_URI=mongodb://localhost/amazona
+		mongodb+srv://amazona:amazona@cluster0.h4edm.mongodb.net/amazona?								retryWrites=true&w=majority
+
 
 
 
