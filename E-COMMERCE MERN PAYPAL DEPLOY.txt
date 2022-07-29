@@ -537,6 +537,18 @@ docs.mongodb.com/manual/administration/install-community
 		MONGODB_URI=mongodb://localhost/amazona
 		mongodb+srv://amazona:amazona@cluster0.h4edm.mongodb.net/amazona?								retryWrites=true&w=majority
 
+3:05:30
+
+20. Seed Sample Data
+  - Create product model
+  - create user model
+  - create seed route 
+  - use route in server.js
+  - seed sample product
+
+
+Check changes in: 
+http://localhost:5001/api/seed
 
 
 
