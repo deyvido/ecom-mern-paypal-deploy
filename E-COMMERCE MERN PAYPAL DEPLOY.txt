@@ -590,6 +590,22 @@ Select: application /json
   		"email": "admin@example.com",
     		"password": "123456"
 	}
+3:32
+
+
+
+23: Complete signin screen
+- handle a submit action
+- save token in store and local storage
+- show user name in header
+
+For a beautiful alert
+
+frontend> npm i react-toastify
+If it doesn't function: 
+Frontend: yarn add react-toastify
+
+
 
 
 https://www.youtube.com/watch?v=CDtPMR5y0QU&list=PLSXxP8I3oMOnRHttfOHmoUdyNUuqjwEOv&index=3
