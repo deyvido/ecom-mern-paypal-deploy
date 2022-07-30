@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import seedRouter from './routes/seedRoutes.js';
 import productRouter from './routes/productRoutes.js';
+import userRouter from './routes/userRoutes.js';
 
 dotenv.config();
 
@@ -18,6 +19,8 @@ mongoose
 
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use('/api/seed', seedRouter);
 
@@ -48,6 +51,12 @@ app.get('/api/products/:id', (req, res) => {
   }
 });
 */
+
+app.use('/api/users', userRouter);
+
+app.use((err, req, res, next) => {
+  res.status(500).send({ message: err.message });
+});
 
 const port = process.env.PORT || 5001; // no funciona con port 5000, dice que est'a en uso
 app.listen(port, () => {

@@ -560,9 +560,36 @@ http://localhost:5001/api/seed
 To encriptar:
  Backend> npm i bcryptjs  
 
-
 Check changes in: 
 http://localhost:5001/api/seed
+
+
+22.- create an API for sign in
+- create signin api
+- npm install jsonwebtoken
+- define generateToken
+
+Install express Asynhandler
+-backend> npm install express-async-handler
+
+-backend> npm install jsonwebtoken
+
+In .env add:
+ JWT_SECRET=somethingsecret
+
+
+Test using 'advanced rest client' (google chrome addon)
+
+-install
+-and test it:
+Select: post
+http://localhost:5001/api/users/signin
+Select: body
+Select: application /json
+	{
+  		"email": "admin@example.com",
+    		"password": "123456"
+	}
 
 
 https://www.youtube.com/watch?v=CDtPMR5y0QU&list=PLSXxP8I3oMOnRHttfOHmoUdyNUuqjwEOv&index=3
