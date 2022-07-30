@@ -550,6 +550,19 @@ docs.mongodb.com/manual/administration/install-community
 Check changes in: 
 http://localhost:5001/api/seed
 
+3:17
+
+21. Seed Sample Users
+- create user model
+- seed sample users
+- create user routes
+
+To encriptar:
+ Backend> npm i bcryptjs  
+
+
+Check changes in: 
+http://localhost:5001/api/seed
 
 
 https://www.youtube.com/watch?v=CDtPMR5y0QU&list=PLSXxP8I3oMOnRHttfOHmoUdyNUuqjwEOv&index=3
