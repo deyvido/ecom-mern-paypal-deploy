@@ -612,6 +612,15 @@ Frontend: yarn add react-toastify
    - handle save shipping address
    - add checkout wizard bar
 
+
+25. Create Sign up screen
+   - create input forms
+   - handle submit
+   - create backend api
+
+26. Implement Select Payment Method Screen
+   - create input forms
+   - handle submit
 https://www.youtube.com/watch?v=CDtPMR5y0QU&list=PLSXxP8I3oMOnRHttfOHmoUdyNUuqjwEOv&index=3
 
 
