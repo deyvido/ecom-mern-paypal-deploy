@@ -605,8 +605,12 @@ frontend> npm i react-toastify
 If it doesn't function: 
 Frontend: yarn add react-toastify
 
+3:46:40
 
-
+24. Create shipping screen
+   - create forms inputs
+   - handle save shipping address
+   - add checkout wizard bar
 
 https://www.youtube.com/watch?v=CDtPMR5y0QU&list=PLSXxP8I3oMOnRHttfOHmoUdyNUuqjwEOv&index=3
 
