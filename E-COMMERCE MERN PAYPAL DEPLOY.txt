@@ -622,6 +622,13 @@ Frontend: yarn add react-toastify
 26. Implement Select Payment Method Screen
    - create input forms
    - handle submit
+
+27. Create place order screen
+     - show cart Items, payment and address
+     - handle place order action
+     - create order crate api
+
+
 https://www.youtube.com/watch?v=CDtPMR5y0QU&list=PLSXxP8I3oMOnRHttfOHmoUdyNUuqjwEOv&index=3
 
 
