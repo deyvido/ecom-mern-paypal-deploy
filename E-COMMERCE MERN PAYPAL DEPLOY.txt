@@ -607,6 +607,7 @@ Frontend: yarn add react-toastify
 
 3:46:40
 
+
 24. Create shipping screen
    - create forms inputs
    - handle save shipping address
