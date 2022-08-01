@@ -640,6 +640,55 @@ Frontend: yarn add react-toastify
     2. fetch order api in frontend
     3. show order information in 2 cloumns
 
+30. Pay Order By PayPal
+    1. generate paypal client id
+    2. create api to return client id
+    3. install react-paypal-js
+    4. use PayPalScriptProvider in index.js
+    5. use usePayPalScriptReducer in Order Screen
+    6. implement loadPaypalScript function
+    7. render paypal button
+    8. implement onApprove payment function
+    9. create pay order api in backend
+
+
+PAYPAL * IMPORTANTE
+
+https://developer.paypal.com/
+real paypal account:
+	deyvidfr@hotmail.com constrasena de hotmail:HhHHbKCcC10
+	constrasena de paypal: HbKHhHCcC10
+
+	dave.id.lmm@gmail.com constrasena de gmail:HhHHbKCcC
+
+-> DASHBOARD -> 
+	-> MY APPS
+		-> SANDBOX (TEST)
+			-> NAME: mern-amazona (default options) -> create
+
+	->copy the client ID to the .env file
+		AeJEqLxdexMdzxbmpBzWR-Zc5wJihcN3vV3tZYUtdw7KFqMSm8xun8SMu0-Dr5CFzOcvloPGGH4Oh7tC
+
+
+-> INSTALL REACT PAYPAL JS
+	frontend> npm install @paypal/react-paypal-js
+
+->Paypalscriptprovider wrap the <app /> in Index.js
+
+
+
+BUSINESS (US)
+
+sb-lo9zb18060855@business.example.com
+]|1oG&S&
+
+CLIENT (US)
+
+sb-wp0vi19705124@personal.example.com
+1wO<^PLo
+
+
+*NOTA: CON BOLIVIA NO FUNCIONA
 
 
 https://www.youtube.com/watch?v=CDtPMR5y0QU&list=PLSXxP8I3oMOnRHttfOHmoUdyNUuqjwEOv&index=3
