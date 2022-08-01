@@ -628,6 +628,12 @@ Frontend: yarn add react-toastify
      - handle place order action
      - create order crate api
 
+28. Implement Place Order Action
+ - handle place order action
+ - create order create api
+
+4:21:35
+
 
 https://www.youtube.com/watch?v=CDtPMR5y0QU&list=PLSXxP8I3oMOnRHttfOHmoUdyNUuqjwEOv&index=3
 
