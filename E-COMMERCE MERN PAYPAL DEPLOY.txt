@@ -705,6 +705,99 @@ sb-wp0vi19705124@personal.example.com
 
 5:24:50
 
+33. Publish To Heroku
+    1. create and config node project
+    2. serve build folder in frontend folder
+    3. Create heroku account
+    4. connect it to github
+    5. Create mongodb atlas database
+    6. Set database connection in heroku env variables
+    7. Commit and push
+
+Route folder, create a new node project:
+project>npm init
+
+project>npm run build
+         
+
+*** If error ERESOLVE 
+project> npm config set legacy-peer-deps true
+https://www.youtube.com/watch?v=vn97BdYx2K8
+
+HEROKU ACCOUNT
+--------------
+Heroku: https://www.heroku.com
+usuario: deyvidfr@hotmail.com
+password: HbKHhHCCC10
+
+
+GITHUB ACCOUNT
+--------------
+
+git hub      github    deyvido   HbKHhHCcC101112 (YA NOO)  => new HhHHbKCcC10   deyvidfr@hotmail.com
+
+ENTER NETLYFY WITH GITHUB ACCOUNT
+---------------------------------
+https://www.netlify.com/
+Enter with GitHub account
+
+user: deyvido, deyvidfr@hotmail.com
+password: HhHHbKCcC10
+
 https://www.youtube.com/watch?v=CDtPMR5y0QU&list=PLSXxP8I3oMOnRHttfOHmoUdyNUuqjwEOv&index=3
+
+
+
+
+MONGODB
+-------
+https://account.mongodb.com/account/login
+
+Mongodb.com
+https://cloud.mongodb.com
+USER:deyvidfr@hotmail.com password: HbKHhHCcC
+
+Cluster0-> collections->createDB->mern-amazona-db
+
+--> dataBase User
+     -> Database Access
+    User: mern-amazona
+    Password: HbKHhHCcC
+
+-> Deployment-> Database -> connect
+     -> add your connection string and copy
+
+     mongodb+srv://<username>:<password>@cluster0.h4edm.mongodb.net/?retryWrites=true&w=majority
+
+Make changes:
+
+	mongodb+srv://mern-amazona:HbKHhHCcC@cluster0.h4edm.mongodb.net/mern-amazona-db?retryWrites=true&w=majority
+
+Copy it to the .env file
+	MONGODB_URI=mongodb+srv://mern-amazona:HbKHhHCcC@cluster0.h4edm.mongodb.net/mern-amazona-db?retryWrites=true&w=majority
+
+And change the other to local:
+MONGODB_URI_LOCAL=mongodb+srv://amazona:amazona@cluster0.h4edm.mongodb.net/amazona?retryWrites=true&w=majority
+
+-->create a copy of the route file in the root folder
+
+
+--> root folder> npm start.  (Close all other connections)
+
+
+
+
+
+
+
+SIGUIENTES
+
+Proyectos con react native
+
+ Build Uber Eats with React Native & YELP API | Redux | Firebase | Google API
+https://www.youtube.com/watch?v=jmvbhuJXFow        este tiene code por partes // 
+
+
+https://www.youtube.com/watch?v=_ivIUCSOZ78
 
 
