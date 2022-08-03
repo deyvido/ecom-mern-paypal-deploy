@@ -785,7 +785,8 @@ MONGODB_URI_LOCAL=mongodb+srv://amazona:amazona@cluster0.h4edm.mongodb.net/amazo
 --> root folder> npm start.  (Close all other connections)
 
 
-
+--> commit changes
+--> go to heroku --> activity
 
 
 
