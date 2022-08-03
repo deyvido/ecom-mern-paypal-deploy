@@ -675,6 +675,7 @@ real paypal account:
 
 ->Paypalscriptprovider wrap the <app /> in Index.js
 
+5:03:40
 
 
 BUSINESS (US)
@@ -689,6 +690,14 @@ sb-wp0vi19705124@personal.example.com
 
 
 *NOTA: CON BOLIVIA NO FUNCIONA
+
+
+31. Display Order History
+    1. create order screen
+    2. create order history api
+    3. use api in the frontend
+
+
 
 
 https://www.youtube.com/watch?v=CDtPMR5y0QU&list=PLSXxP8I3oMOnRHttfOHmoUdyNUuqjwEOv&index=3
