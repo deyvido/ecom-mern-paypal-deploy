@@ -788,6 +788,27 @@ MONGODB_URI_LOCAL=mongodb+srv://amazona:amazona@cluster0.h4edm.mongodb.net/amazo
 --> commit changes
 --> go to heroku --> activity
 
+***IF THERE IS AN ERROR AFTER CORRECTING ANC COMMITING DONT FORGET TO SYNC
+
+The error was: ***npm eresolve then: make changes in the package.json, add:
+     && npm config set legacy-peer-deps true &&
+
+So:
+ "build": "cd backend && npm config set legacy-peer-deps true && npm install  && cd ../frontend && npm install && npm run build",
+
+
+--> from activity copy the link:
+ https://mern-amazona-pro.herokuapp.com/
+
+
+5:37:40
+
+34. Add Sidebar and Search Box
+     1. add sidebar
+     2. add search box
+
+
+
 
 
 
